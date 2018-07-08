@@ -1,0 +1,54 @@
+<div class="comicDetail">
+  <div class="detail-container" v-if="detail">
+    <div class="detail text-center">
+      <div class="cover">
+        <img class="cover-img" src="@/assets/comic_cover.png">
+      </div>
+      <div class="info text-left">
+        <h2 class="info-title text-center">{{ detail.title }}</h2>
+        <div class="info-body">
+          <div class="body-title">
+            <span class="subtitle">Genres</span>
+            <span class="subtext">{{detail.type}}</span>
+          </div>
+          <div class="body-title">
+            <span class="subtitle">Author</span>
+            <span class="subtext">{{detail.author}}</span>
+          </div>
+          <div class="body-title">
+            <span class="subtitle">Status</span>
+            <span class="subtext">{{detail.status}}</span>
+          </div>
+          <div class="body-title">
+            <span class="subtitle">Rate</span>
+            <div class="subtext">
+              <div class="star" v-for="index in detail.score">
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="star" v-for="index in (5-detail.score)">
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="description mT20">
+            <span class="subtitle">Summary</span>
+            <div class="subcontent">If your banker breaks, you snap; if your apothecary by mistake sends you poison in your pills, you die.
+              <br>
+              <br>Therefore, I say, I saw that this situation of mine was the precise situation of every mortal that has this
+              Siamese connexion with a plurality of other mortals.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chapter mT30">
+      <div class="chapter-title">All Chapters</div>
+      <div class="chapter-body">
+        <div class="chapter-list" v-for="item in detail.chapters">
+          <router-link class="mL25" :to="'/comics/'+detail.id+'/chapter/'+item.id">{{ item.text }}</router-link>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

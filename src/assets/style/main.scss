@@ -1,0 +1,27 @@
+@import 'normalize';
+@import 'transition';
+@import 'utils';
+@import 'spacing';
+html {
+  color: $light;
+  background-color: adjust-color($dark, $lightness: 80%);
+  font-family: 'Roboto';
+}
+
+#app {
+  width: 100%;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}

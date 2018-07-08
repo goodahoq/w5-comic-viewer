@@ -1,0 +1,115 @@
+@import '../../assets/style/utils';
+@import '../../assets/style/spacing';
+.comicDetail {
+  color: $dark;
+  display: inline-flex;
+}
+
+a {
+  text-decoration: none;
+  color: $dark;
+}
+
+.detail-container {
+  padding: 50px 250px;
+}
+
+.detail {
+  @include flex(start);
+}
+
+.cover {
+  @include outline($dark, 4px);
+  flex: 296;
+  min-width: 240px;
+}
+
+.cover-img {
+  width: 100%;
+}
+
+.info {
+  flex: 317;
+}
+
+.info-title {
+  @include outline($dark, 4px);
+  margin: 0px 8px;
+  padding: 12px 20px;
+  background-color: $dark;
+  font-size: 36px;
+  font-weight: 900;
+  color: $light;
+  line-height: 36px;
+  letter-spacing: 5px;
+}
+
+.body-title {
+  @include flex(start, center);
+}
+
+.info-body {
+  padding: 20px 30px;
+}
+
+.subtitle {
+  flex: 1;
+  font-family: Roboto-Bold;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 43px;
+}
+
+.subtext {
+  flex: 3;
+  @include flex(start);
+  >.star {
+    margin-right: 10px;
+  }
+}
+
+.subcontent {
+  font-family: Roboto-Regular;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+  padding: 18px 0;
+}
+
+.chapter-title {
+  font-size: 30px;
+  padding: 8px 24px;
+  background-color: $dark;
+  color: $light;
+  width: fit-content;
+  @include outline($dark, 4px);
+}
+
+.chapter-body {
+  margin-top: 8px;
+  @include outline($dark, 4px);
+  width: 100%;
+  padding: 10px 0px;
+  @include flex(center, start);
+  flex-direction: column;
+}
+
+.chapter-list {
+  width: 100%;
+  padding: 10px 0px;
+  font-family: Roboto-Bold;
+  color: $dark;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 16px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:hover {
+    background-color: $dark;
+    >a {
+      color: $light;
+    }
+  }
+}
